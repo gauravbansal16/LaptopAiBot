@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="LaptopAiBot:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/LaptopAiBot_ear_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="LaptopAiBot/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="LaptopAiBot.war">
+        <element id="artifact" artifact-name="LaptopAiBot:war exploded" />
+      </element>
+    </root>
+  </artifact>
+</component>

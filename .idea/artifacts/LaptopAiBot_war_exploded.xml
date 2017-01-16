@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="LaptopAiBot:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/LaptopAiBot_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="LaptopAiBot" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: ai.api:libai:1.2.3" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.2" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="LaptopAiBot/web/Web" />
+      <element id="javaee-facet-resources" facet="LaptopAiBot/javaeeApplication/javaEEApplication" />
+    </root>
+  </artifact>
+</component>
