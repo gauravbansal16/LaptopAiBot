@@ -20,9 +20,12 @@ import java.util.List;
 @WebServlet(name="Servlet")
 public class Servlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+
         TextClientApplication tca=new TextClientApplication();
         List<String> replies=new ArrayList<String>();
         AIResponse reply=tca.responder(request.getParameter("request"), (List<AIContext>) request.getSession().getAttribute("Context"));
+
+
         if (reply.getStatus().getCode() == 200) {
             Result result=reply.getResult();
             //System.out.println(action);
@@ -30,9 +33,13 @@ public class Servlet extends javax.servlet.http.HttpServlet {
             String customResponse=actions.run();
             replies.add(customResponse);
             replies.add(reply.getResult().getFulfillment().getSpeech());
-        } else {
+        }
+
+        else {
             System.err.println(reply.getStatus().getErrorDetails());
         }
+
+
         request.setAttribute("reply",replies);
         request.getSession().setAttribute("Context",reply.getResult().getContexts());
         RequestDispatcher rd=request.getRequestDispatcher("chatreply.jsp");

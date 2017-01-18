@@ -22,7 +22,6 @@
     </c:forEach>
 </p>
 <form action="chat" method="post">
-    <br>
     <input type="text" name="request" ><br>
     <input type="submit" value="Submit">
 </form>

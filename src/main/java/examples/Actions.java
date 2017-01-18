@@ -32,6 +32,6 @@ public class Actions {
         if (device.equals("battery"))
             return "The battery is 84";
         else
-            return "";
+            return "The info is XYZ";
     }
 }
